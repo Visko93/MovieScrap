@@ -11,6 +11,7 @@ export const ModalStyle = styled.div`
       height: 75vh;
       width: 80%;
       background-color: rgba(255,345,245);
+      align-self: right;
       overflow-y: scroll;
       border-radius: 1em;
   }
@@ -20,8 +21,7 @@ export const ModalStyle = styled.div`
     cursor: pointer;
     color: #000;
     font-size: 4rem;
-    margin-bottom: 1em;
-    align-self: right;
+    margin-bottom: 2em;
 
     &:hover{
       opacity: .8;
@@ -49,7 +49,13 @@ export const ModalStyle = styled.div`
                         " .     .  rate";
     margin: 2.5em 2em 0;
     align-self: start;
+    padding-bottom: 5em;
 
+  }
+  .lang{
+    grid-area: lang;
+    font-weight: bold;
+    text-transform: uppercase;
   }
   .title{
     grid-area: title
@@ -72,10 +78,12 @@ export const ModalStyle = styled.div`
   .img__container{
     flex-flow: row;
     align-items: center;
+    margin-top: 2em;
   }
   img{
     width: 30%;
   }
+
 
 }
 `

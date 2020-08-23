@@ -11,7 +11,7 @@ function FilmList ({open, results, handleModal}) {
     <ListStyle>
       <ul className="film__list">
         {!results 
-          ? <h1>Reasearch a movie</h1>
+          ? <h1>Research a movie</h1>
           :results.map(film => (
           <li className="film__item" key={film.id}>
           <div className="img__container">
