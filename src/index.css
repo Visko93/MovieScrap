@@ -1,13 +1,363 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* RESETS GLOBALS */
+/* Reset.less
+ * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,800');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Ubuntu:wght@700&display=swap');
+
+ html,
+ body {
+   margin: 0;
+   padding: 0;
+ }
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p,
+ blockquote,
+ pre,
+ a,
+ abbr,
+ acronym,
+ address,
+ cite,
+ code,
+ del,
+ dfn,
+ em,
+ img,
+ q,
+ s,
+ samp,
+ small,
+ strike,
+ strong,
+ sub,
+ sup,
+ tt,
+ var,
+ dd,
+ dl,
+ dt,
+ li,
+ ol,
+ ul,
+ fieldset,
+ form,
+ label,
+ legend,
+ button,
+ table,
+ caption,
+ tbody,
+ tfoot,
+ thead,
+ tr,
+ th,
+ td {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 100%;
+   line-height: 1;
+   font-family: inherit;
+ }
+ table {
+   border-collapse: collapse;
+   border-spacing: 0;
+ }
+ ol,
+ ul {
+   list-style: none;
+ }
+ q:before,
+ q:after,
+ blockquote:before,
+ blockquote:after {
+   content: "";
+ }
+ html {
+   font-size: 100%;
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+ }
+ a:focus {
+   outline: thin dotted;
+ }
+ a:hover,
+ a:active {
+   outline: 0;
+ }
+ article,
+ aside,
+ details,
+ figcaption,
+ figure,
+ footer,
+ header,
+ hgroup,
+ nav,
+ section {
+   display: block;
+ }
+ audio,
+ canvas,
+ video {
+   display: inline-block;
+   *display: inline;
+   *zoom: 1;
+ }
+ audio:not([controls]) {
+   display: none;
+ }
+ sub,
+ sup {
+   font-size: 75%;
+   line-height: 0;
+   position: relative;
+   vertical-align: baseline;
+ }
+ sup {
+   top: -0.5em;
+ }
+ sub {
+   bottom: -0.25em;
+ }
+ img {
+   border: 0;
+   -ms-interpolation-mode: bicubic;
+ }
+ button,
+ input,
+ select,
+ textarea {
+   font-size: 100%;
+   margin: 0;
+   vertical-align: baseline;
+   *vertical-align: middle;
+ }
+ button,
+ input {
+   line-height: normal;
+   *overflow: visible;
+ }
+ button::-moz-focus-inner,
+ input::-moz-focus-inner {
+   border: 0;
+   padding: 0;
+ }
+ button,
+ input[type="button"],
+ input[type="reset"],
+ input[type="submit"] {
+   cursor: pointer;
+   -webkit-appearance: button;
+ }
+ input[type="search"] {
+   -webkit-appearance: textfield;
+   -webkit-box-sizing: content-box;
+   -moz-box-sizing: content-box;
+   box-sizing: content-box;
+ }
+ input[type="search"]::-webkit-search-decoration {
+   -webkit-appearance: none;
+ }
+ textarea {
+   overflow: auto;
+   vertical-align: top;
+ }
+ @keyframes spin {
+   0% {
+     transform: rotate(0deg);
+   }
+   100% {
+     transform: rotate(359deg);
+   }
+ }
+ @keyframes glow {
+   0%,
+   100% {
+     opacity: 1;
+   }
+   50% {
+     opacity: 0.5;
+   }
+ }
+ .force-wrap {
+   word-wrap: break-word;
+   word-break: break-all;
+   -ms-word-break: break-all;
+   word-break: break-word;
+   hyphens: auto;
+ }
+ .type-light {
+   font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-weight: 300;
+ }
+ .type-bold {
+   font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-weight: 800;
+ }
+ .type-italic {
+   font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-style: italic;
+ }
+ * {
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   -webkit-tap-highlight-color: transparent;
+ }
+ html,
+ button,
+ input,
+ textarea,
+ select {
+   outline: none;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+ body {
+   font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-style: 400;
+   color: #333;
+   font-size: 16px;
+ }
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+   font-family: 'Nunito Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-style: 400;
+   margin: 0;
+   padding: 0;
+ }
+ h1 {
+   font-size: 40px;
+   line-height: 48px;
+ }
+ h2 {
+   font-size: 28px;
+   line-height: 32px;
+ }
+ h3 {
+   font-size: 24px;
+   line-height: 28px;
+ }
+ h4 {
+   font-size: 20px;
+   line-height: 24px;
+ }
+ h5 {
+   font-size: 14px;
+   line-height: 20px;
+   color: #ccc;
+   text-transform: uppercase;
+ }
+ h6 {
+   color: #aaa;
+ }
+ p {
+   font-size: 16px;
+   line-height: 24px;
+ }
+ sub,
+ sup {
+   font-size: 0.8em;
+ }
+ sub {
+   bottom: -0.2em;
+ }
+ sup {
+   top: -0.2em;
+ }
+ b {
+   font-weight: bold;
+ }
+ em {
+   font-style: italic;
+ }
+
+
+
+/* END OF RESETS 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+/* Start */
+
+:root{
+  --ff-primary: ‘Lato’, primary;
+  --ff-secondary: ‘Ubuntu’, Secondary;
+  
+  /* Colors:  */
+  --clr-ligth: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #32A9EA;
+  --clr-primary: hsl(127, 40%, 48%);
+  --clr-primary-light: hsl(127, 40%, 37%);
+  --clr-primary-dark: hsl(127, 40%, 62%);
+  --clr-secondary-light: #EA8933;
+  --clr-secondar-darky: #CE582A;
+  --clr-secondary: #DB6D2D;
+  
+  /* Box Shadow     */
+   --box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+            0.125em 0.125em 0.25em rgba(0,0,0,.15);
+  
+   /* Font sizes  */
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1,25rem;
+  --fs-body: 1rem;
+  
+  @media (min-width: 800px) {
+      :root {
+          --fs-h1: 4.5rem;
+          --fs-h2: 3.75rem;
+          --fs-h3: 1.5rem;
+          --fs-body: 1.125rem;
+      }
+    }
+  
+  }
+
+html {
+  font-size: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+small {
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width:1000px;
+  padding: 40px;
+}
+

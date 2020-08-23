@@ -1,0 +1,26 @@
+
+/* Start */
+.navBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #49ab55;
+  color: white;
+  padding: 1em;
+}
+.logo{
+  color: var(--clr-dark);
+}
+
+.nav__items{
+  display: flex;
+}
+.nav__item{
+  margin-right: .5em;
+  font-size: var(--fs-h2);
+}
+.nav__item:hover,
+.nav__item:focus{
+  opacity: .8;
+  cursor: pointer;
+}
