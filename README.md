@@ -1,7 +1,7 @@
 # Movie Finder
 
 ---
-## Search for a movie, or a key word and get Ideas.
+## Search for a movie, or a key word.
 
 ![React_App.gif](./src/utils/img/React_App.gif)
 
