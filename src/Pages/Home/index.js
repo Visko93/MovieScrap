@@ -7,7 +7,6 @@ import Modal from "../../components/Modal";
 function Home () {
   
   const[query, setQuery] = useState('')
-  const[page, setPage] = useState(1)
   const[listData, setListData] = useState({})
   const[modal, setModal] = useState(false)
   const[filmDetails, setFilmDetails] = useState({})
@@ -35,7 +34,7 @@ function Home () {
   const handleMoviesSearch = async (e) => {
     e.preventDefault()
     
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=57f1801fc4dcb7127b39d9f6896a961a&language=en-US&query=${query}&page=${page}&include_adult=false`;
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=57f1801fc4dcb7127b39d9f6896a961a&language=en-US&query=${query}&page=1&include_adult=false`;
 
     try {
       const res = await fetch(url)
