@@ -22,4 +22,4 @@ Api.pass
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-api.pass
+Api.pass
